@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from backend.views import RecipeAPIView, CategoryAPIView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/recipelist/', RecipeAPIView.as_view()),
+    path('api/categorylist/', CategoryAPIView.as_view()),
 ]
+
